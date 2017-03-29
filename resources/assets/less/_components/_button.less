@@ -1,0 +1,53 @@
+/**
+ * Button
+ *
+ */
+
+.button {
+  &:extend(.btn);
+  background: @color-primary;
+  letter-spacing: 0.05em;
+  border-radius: 50px;
+  font-size: 14px;
+
+  &,
+  span { color: @color-primary--inverse; }
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: @color-primary--inverse;
+  }
+}
+
+.button--warning {
+  background: @color-warning;
+  color: #fff;
+}
+
+.button--link {
+  background-color: transparent;
+  color: @color-primary;
+
+  &,
+  span { color: @color-primary; }
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: transparent;
+    color: @color-primary;
+  }
+}
+
+.button--dropdown {
+  &:extend(.dropdown-toggle all);
+
+  &:focus { outline: 0; }
+}
+
+.button--small {
+  font-size: 9px;
+  padding: 4px 6px;
+}

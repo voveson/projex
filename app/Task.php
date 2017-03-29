@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
-    protected $fillable = ['created_by', 'assigned_to', 'tasklist_id', 'description', 'status'];
-    protected $with = ['creator', 'assignee'];
+    protected $fillable = ['created_by', 'assigned_to', 'tasklist_id', 'sort_order', 'description', 'status'];
+    protected $with = ['creator', 'assignee', 'comments'];
+    protected $appends = ['created_at_string'];
 
     public function tasklist()
     {
@@ -22,5 +23,15 @@ class Task extends Model
     public function assignee()
     {
         return $this->hasOne('App\User', 'id', 'assigned_to');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
+
+    public function getCreatedAtStringAttribute()
+    {
+        return $this->created_at->diffForHumans();
     }
 }

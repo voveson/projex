@@ -1,0 +1,56 @@
+/**
+ * Multiple select
+ *
+ */
+
+@import (less) "@{vendors}/multiple-select/multiple-select.css";
+
+.ms-parent {
+  width: 100% !important;
+
+  // dropdown menu z-index fix
+  .dropdown-menu &,
+  .dropdown-menu .input-group &.form-control { z-index: 999; }
+
+  .form-control {
+    position: relative;
+    z-index: 9999;
+  }
+}
+
+.ms-choice {
+  border: none;
+  border-radius: 0;
+  height: 100%;
+  background: transparent;
+}
+
+.ms-choice {
+  outline: 0;
+
+  > div {
+    height: 100%;
+    background-position: -2px 4px;
+
+    &.open { background-position: -22px 4px; }
+  }
+
+  span {
+    position: relative;
+    height: 100%;
+    line-height: @line-height-base; // same line-height as .form-control
+    padding: 0;
+  }
+}
+
+.ms-drop { left: 0 }
+
+.ms-drop ul > li.multiple { float: none; }
+
+.ms-drop input[type="checkbox"] { margin: 0 6px 0 0; }
+
+
+// Image path fix
+.ms-choice > div,
+.ms-choice > div.open,
+.ms-search input { background-image: url('@{imagePath}/vendors/multiple-select/multiple-select.png'); }

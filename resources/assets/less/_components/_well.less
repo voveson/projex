@@ -1,0 +1,35 @@
+/**
+ * Well
+ *
+ */
+
+.well {
+  border: 1px #ddd solid;
+  border-radius: 3px;
+  background: @color-bg-light;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: .85rem;
+  position: relative;
+}
+
+.well__edit {
+  border-radius: 3px;
+  background: darken(@color-bg-light, 5%);
+  color: @color-primary;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  font-size: .8em;
+  display: none;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: @color-primary;
+    text-decoration: none;
+  }
+
+  .well:hover & { display: block; }
+}

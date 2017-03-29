@@ -1,0 +1,95 @@
+/**
+ * Modal
+ *
+ */
+
+.modal {
+  &:extend(.modal all);
+}
+
+.modal-backdrop {
+  &:extend(.modal-backdrop all);
+}
+
+.modal__dialog {
+  &:extend(.modal-dialog all);
+}
+
+.modal__content {
+  &:extend(.modal-content all);
+}
+
+.modal__header {
+  &:extend(.modal-header all);
+  border: none;
+  position: relative;
+  min-height: 33px;
+  background: lighten(@color-primary, 38%);
+  border-radius: 5px 5px 0 0;
+  font-size: 12px;
+  padding: 8px 15px;
+
+  .close {
+    margin-top: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    color: @color-primary;
+    transition: all .08s ease;
+
+    &:active,
+    &:focus,
+    &:hover { outline: 0; }
+  }
+
+  .dropdown { display: inline-block; }
+
+  .button--dropdown.button--link { padding: 0; }
+}
+
+.modal__title {
+  &:extend(.modal-title all);
+  color: @color-primary;
+}
+
+.modal__body {
+  &:extend(.modal-body all);
+
+  > p:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  > p:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.modal__footer {
+  &:extend(.modal-footer all);
+  border: none;
+}
+
+
+/*
+ * Modifiers
+ *
+ */
+
+.modal--wide {
+  .modal__dialog {
+    @media (min-width: @screen-sm) {
+      width: 750px;
+    }
+  }
+}
+
+
+/*
+ * Overflow fix
+ */
+
+.modal { overflow: visible; }
+.modal__body { overflow-y: visible; }

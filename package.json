@@ -6,6 +6,7 @@
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
+    "bootstrap": "^3.3.6",
     "gulp": "^3.9.1",
     "jquery": "^3.1.0",
     "laravel-elixir": "^6.0.0-14",
@@ -15,6 +16,10 @@
     "less-loader": "^2.2.3",
     "lodash": "^4.16.2",
     "vue": "^2.0.1",
-    "vue-resource": "^1.0.3"
+    "vue-resource": "^1.0.3",
+    "vuedraggable": "^2.5.0-rc0",
+    "multiple-select": "^1.2.0",
+    "pickadate": "^3.5.6",
+    "prismjs": "^1.4.1"
   }
 }

@@ -1,0 +1,30 @@
+/**
+ * List nav
+ *
+ */
+
+.list-nav {
+  list-style-type: none;
+  padding: 0;
+  font-size: 0.9rem;
+
+  a {
+    color: @color-primary;
+
+    &:active,
+    &:focus,
+    &:hover { text-decoration: none; }
+  }
+}
+
+.list-nav__item {
+  margin-bottom: 10px;
+
+  a { display: block; }
+
+  small {
+    display: block;
+    font-size: 0.7em;
+    color: @color-muted;
+  }
+}

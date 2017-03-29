@@ -1,0 +1,107 @@
+/**
+ * Card
+ *
+ */
+
+
+// Small card
+.card {
+  .section > & {
+    padding-top: @grid-gutter-width / 2;
+  }
+}
+
+.card__inner {
+  background: #fff;
+  box-shadow: 0 1px 2px #cacaca;
+  border-radius: 2px;
+  margin-bottom: 15px;
+  display: block;
+  color: #333;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: #333;
+    text-decoration: none;
+  }
+}
+
+.card__header,
+.card__content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.card__header {
+  &:extend(.clearfix all);
+  background: lighten(@color-primary, 38%);
+  font-size: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.card__content {
+  font-size: 14px;
+  line-height: 120%;
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  p { margin: 0; }
+}
+
+.card__assigned {
+  float: right;
+  position: relative;
+  top: -4px;
+  right: -10px;
+}
+
+
+/*
+ * Modifiers
+ *
+ */
+
+.card--priority {
+  .card__header {
+    background: @color-warning;
+    color: #fff;
+  }
+}
+
+// Card expanded
+.card-header {
+  &:extend(.clearfix all);
+  margin-bottom: 40px;
+  width: 100%;
+  display: table;
+}
+
+.card-header__title,
+.card-header__right {
+  display: table-cell;
+}
+
+.card-header__title {
+  h3 { margin: 0; }
+
+  span {
+    display: block;
+    color: @color-muted;
+    font-size: 0.7em;
+    font-style: italic;
+  }
+
+  a { color: @color-muted; }
+}
+
+.card-header__right {
+  text-align: right;
+
+  .dropdown { display: inline-block; }
+}
+
+.card-meta {}
+
+.card-extras {}

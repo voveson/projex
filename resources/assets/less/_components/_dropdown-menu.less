@@ -1,0 +1,56 @@
+/**
+ * Dropdown menu
+ *
+ */
+
+@dropdown-color-primary: lighten(@color-primary, 35%);
+
+.dropdown-menu {
+  box-shadow: 0 17px 80px rgba(0,0,0,0.175);
+  margin: 0;
+  padding: 0;
+
+  .divider {
+    background-color: @dropdown-color-primary;
+    margin: 0;
+    padding: 0;
+  }
+
+  > li { padding: 5px 0; }
+
+  > li > a:hover,
+  > li > a:focus { background-color: transparent; }
+
+  .nav-section & {
+    max-height: 250px;
+    overflow: auto;
+    min-width: 300px;
+  }
+}
+
+.dropdown-menu-title {
+  margin: 0;
+  padding: 3px 20px;
+}
+
+.dropdown-button {
+  background: @color-primary;
+
+  .dropdown-menu > li& > a { color: #fff; }
+}
+
+
+/*
+ * Modifiers
+ *
+ */
+
+.dropdown-menu--wide {
+  padding: 10px;
+  min-width: 300px;
+}
+
+.dropdown-menu--right {
+  left: auto;
+  right: 0;
+}

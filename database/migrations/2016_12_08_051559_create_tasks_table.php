@@ -20,6 +20,8 @@ class CreateTasksTable extends Migration
             $table->integer('tasklist_id')->unsigned();
             $table->string('description');
             $table->string('status');
+            $table->dateTime('due_at')->nullable();
+            $table->integer('sort_order');
             $table->timestamps();
         });
     }

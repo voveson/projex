@@ -1,0 +1,63 @@
+/**
+ * Global
+ *
+ */
+
+html,
+body {
+  font-size: 16PX; // ignored by pxtorem
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+  color: @color-body;
+
+  [v-cloak] { display: none }
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+
+/*
+ * Misc
+ *
+ */
+
+a {
+  &,
+	&:focus,
+	&:active,
+	&:hover {
+    color: @color-primary;
+  }
+}
+
+ol {}
+ul {}
+
+p {}
+
+blockquote {}
+
+code {
+  background-color: #f5f5f5;
+  color: #e4027d;
+  padding: 2px 5px;
+  border-radius: 4px;
+  border: solid 1px #e4e4e4;
+  font-family: 'Source Code Pro', monospace !important;
+}
+
+pre > code {
+  border: none;
+  font-family: 'Source Code Pro', monospace !important;
+}

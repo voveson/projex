@@ -1,0 +1,22 @@
+/**
+ * Pickadate
+ *
+ */
+
+@import (less) "@{vendors}/pickadate/lib/themes/classic.css";
+@import (less) "@{vendors}/pickadate/lib/themes/classic.date.css";
+
+.picker__input {
+  &:hover { cursor: pointer; }
+
+  &.form-control[readonly] { background: transparent; }
+
+  .input-group & {
+    &.form-control:not(:first-child):not(:last-child) {
+      // Fix datepicker rounded corners
+      border-radius: 0 @border-radius @border-radius 0;
+    }
+  }
+}
+
+.picker__holder { outline: 0; }

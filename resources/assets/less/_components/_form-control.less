@@ -1,0 +1,45 @@
+/**
+ * Form control
+ *
+ */
+
+.form-control {
+  border-radius: @border-radius;
+  border: none;
+  border-bottom: 1px #E4E4E4 solid;
+  box-shadow: none;
+  background: transparent;
+
+  textarea& { border: 1px #E4E4E4 solid; }
+
+  &:active,
+  &:focus {
+    border-color: lighten(@color-primary, 14%);
+    box-shadow: none;
+  }
+}
+
+.form-control[readonly] { background: transparent; }
+
+/*
+ * File uploader
+ *
+ */
+
+.form-control--file-uploader {
+  margin-top: 20px;
+
+  input[type=file] { width: 100%; }
+}
+
+
+/*
+ * Input group
+ *
+ */
+
+.input-group-addon {
+  background: transparent;
+  border-radius: @border-radius;
+  border: none;
+}

@@ -1,0 +1,36 @@
+/**
+ * Toolbar
+ *
+ */
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  position: relative;
+  z-index: 9;
+  width: 100%;
+  margin: 20px 0;
+
+  .container-fluid {
+    &:extend(.clearfix all);
+    width: 100%;
+  }
+}
+
+.toolbar-nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+.toolbar-nav__item {
+  display: inline-block;
+  position: relative;
+}
+
+.toolbar-nav--right {
+  float: right;
+}

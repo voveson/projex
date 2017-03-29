@@ -21,7 +21,7 @@
     }
 </script>
 
-<style lang="less" scoped>
+<style lang="less" rel="stylesheet/less" scoped>
     .notification {
         margin: 15px;
     }
